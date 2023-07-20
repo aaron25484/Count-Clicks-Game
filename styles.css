@@ -1,0 +1,138 @@
+body{
+    background-color: rgb(245,245,245);
+}
+/*-----------------------LOGIN SCREEN--------------------*/
+.insert_name {
+    margin: 5% 9.5% 5%;
+    width: 80%;
+    border-radius: 0.4em;
+    box-shadow: 1px 1px 5px 2px #c7c7c7fe;
+    background-color: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#userName {
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
+
+#button_first_screen {
+    margin-top: 0.5em;
+    width: 50%;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    border-radius: 0.2em;
+}
+
+/*----------------------RANKING BOX-------------------*/
+
+.ranking {
+    margin: auto;
+    width: 40%;
+    border-radius: 0.4em;
+    box-shadow: 1px 1px 5px 2px #c7c7c7fe;
+    background-color: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: left;
+}
+
+/*-----------------------START GAME SCREEN----------------*/
+
+#button_second_screen {
+    margin: auto;
+    display: block;
+    padding: 0.8em;
+    width: 50%;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    border-radius: 0.2em;
+}
+
+/*-----------------------MAIN GAME SCREEN----------------*/
+
+#button_game {
+    margin: auto;
+    display: block;
+    padding: 2em;
+    width: 50%;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    border-radius: 0.2em;
+}
+
+
+/*----------------------------YOUR SCORE GAME -----------*/
+
+.score_screen {
+    margin: auto;
+    width: 80%;
+    border-radius: 0.4em;
+    box-shadow: 1px 1px 5px 2px #c7c7c7fe;
+    background-color: white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    align-items: center;
+}
+
+#button_play_again {
+    margin-top: 0.5em;
+    width: 50%;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    border-radius: 0.2em;
+}
+
+/*--------------------DISPLAY DE/ACTIVATION---------------------*/
+
+.insert_name-none {
+    display: none;
+}
+
+.insert_name-block {
+    display: block;
+}
+
+.ranking-none {
+    display: none;
+}
+
+.ranking-block {
+    display: block;
+}
+
+.pre_game-none {
+    display: none;
+}
+
+.pre_game-block {
+    display: block;
+}
+
+.main_screen_game-none {
+    display: none;
+}
+
+.main_screen_game-block {
+    display: block;
+}
+
+.score_screen-none {
+    display: none;
+}
+
+.score_screen-block {
+    display: block;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Clicks in 10 seconds</title>
+</head>
+<body>
+<!--------------------------LOGIN SCREEN------------------------------>    
+    <div class="insert_name">
+        <h3>Type your username</h3>
+        <label for="userName">Username</label>
+            <input id="userName" type="text" value="" placeholder="Enter your username" required>
+        <button href="#" id="button_first_screen" type="button" disabled>Enter</button>
+    </div>
+
+<!----------------------------RANKING BOX----------------------------->
+    <div class="ranking">
+        <h4>User Scores</h4>
+        <h5>Pepe</h5>
+        <p>1</p>
+        <h5>Pepe</h5>
+        <p>2</p>
+        <h5>Pepe</h5>
+        <p>3</p>
+        <h5>Pepe</h5>
+        <p>4</p>
+    </div>
+
+<!----------------------------START GAME SCREEN----------------------------->
+    <div class="pre_game">
+        <button id="button_second_screen" type="button">Start Game</button>
+    </div>
+
+<!----------------------------MAIN GAME SCREEN----------------------------->
+    <div class="main_screen_game">
+        <button id="button_game" type="button">Click Me!</button>
+    </div>
+
+<!----------------------------YOUR SCORE GAME ----------------------------->
+    <div class="score_screen">
+        <h3>Your score</h3>
+        <p>Your time is up!</p>
+        <h4 id="your_score">You have made 44 clicks</h4>
+        <button id="button_play_again" type="button">Play again</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

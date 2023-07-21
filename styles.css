@@ -3,12 +3,12 @@ body{
 }
 /*-----------------------LOGIN SCREEN--------------------*/
 .insert_name {
-    margin: 5% 9.5% 5%;
+    margin: 18% 9.5% 15%;
     width: 80%;
     border-radius: 0.4em;
     box-shadow: 1px 1px 5px 2px #c7c7c7fe;
     background-color: white;
-    padding: 1em;
+    padding: 2em;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -29,10 +29,23 @@ body{
     border-radius: 0.2em;
 }
 
+#button_first_screen:hover{
+    color: black;
+    background-color: rgb(185, 185, 185);
+    cursor: pointer;
+}
+
+.disabled{
+    opacity: 50%;
+    cursor: not-allowed;
+}
+
 /*----------------------RANKING BOX-------------------*/
 
 .ranking {
-    margin: auto;
+    position: fixed;
+    top:55%;
+    left: 30%;
     width: 40%;
     border-radius: 0.4em;
     box-shadow: 1px 1px 5px 2px #c7c7c7fe;
@@ -47,7 +60,7 @@ body{
 /*-----------------------START GAME SCREEN----------------*/
 
 #button_second_screen {
-    margin: auto;
+    margin: 45% auto;
     display: block;
     padding: 0.8em;
     width: 50%;
@@ -59,8 +72,9 @@ body{
 
 /*-----------------------MAIN GAME SCREEN----------------*/
 
+
 #button_game {
-    margin: auto;
+    margin: 45% auto;
     display: block;
     padding: 2em;
     width: 50%;
@@ -74,7 +88,7 @@ body{
 /*----------------------------YOUR SCORE GAME -----------*/
 
 .score_screen {
-    margin: auto;
+    margin: 40% auto;
     width: 80%;
     border-radius: 0.4em;
     box-shadow: 1px 1px 5px 2px #c7c7c7fe;
@@ -101,16 +115,16 @@ body{
     display: none;
 }
 
-.insert_name-block {
-    display: block;
+.insert_name-flex {
+    display: flex;
 }
 
 .ranking-none {
     display: none;
 }
 
-.ranking-block {
-    display: block;
+.ranking-flex {
+    display: flex;
 }
 
 .pre_game-none {
@@ -125,14 +139,14 @@ body{
     display: none;
 }
 
-.main_screen_game-block {
-    display: block;
+.main_screen_game-flex {
+    display: flex;
 }
 
 .score_screen-none {
     display: none;
 }
 
-.score_screen-block {
-    display: block;
+.score_screen-flex {
+    display: flex;
 }

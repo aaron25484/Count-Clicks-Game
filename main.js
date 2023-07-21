@@ -12,16 +12,17 @@ let showScore = document.querySelector(".score_screen-none");
 
 let textUser = document.querySelector("#userName")
 
+let username = "";
+
 
 enterUser.addEventListener('click', ()=>{
     if(textUser.value === ""){
         enterUser.disabled;
     } else {
-        
+        username =textUser.value;
         showLogin.classList.add("insert_name-none");
         showStartGame.classList.remove("pre_game-none");
     }   
-    console.log(enterUser)
 } )
 
 let startTime;
@@ -33,17 +34,40 @@ startGame.addEventListener('click', ()=>{
         showGame.classList.add("main_screen_game-none");
         showScore.classList.remove("score_screen-none");
         showScore.classList.add("score_screen");
+        saveResult(username, clicks);
+        updateHiresultList;
     },10000)
 } )
 
-let clicks;
+let clicks = 0;
+
 
 gameButton.addEventListener('click', ()=>{
-    clicks = 0;
     clicks++;
-    console.log (clicks)
-    return clicks;
-} )
+} ) 
+
+function saveResult (username, result){
+    const results = JSON.parse(localStorage.getItem("highResults") || "[]");
+    results.push({ username, result });
+    results.sort((a, b) => b.result - a.result);
+    localStorage.setItem("highResults", JSON.stringify(results.slice(0, 4)));
+}
+
+
+function updateHiresultList() {
+    const hiresultList = document.getElementById("hiresultList");
+    hiresultList.innerHTML = "";
+  
+    const results = JSON.parse(localStorage.getItem("highResults") || "[]");
+    results.forEach((entry, index) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${index + 1}. ${entry.username} - ${entry.result} clicks`;
+      hiresultList.appendChild(listItem);
+    });
+  }
+
+
+
 
 againGame.addEventListener('click', ()=>{
     showScore.classList.remove("score_screen");
@@ -51,6 +75,7 @@ againGame.addEventListener('click', ()=>{
 } )
 
 
+updateHiresultList();
 //---------------------PHASE TWO-----------------------//
 
 
@@ -58,9 +83,3 @@ againGame.addEventListener('click', ()=>{
 
 //--------------------LOCAL STORAGE--------------------//
 
-let myStorage = window.localStorage
-
-let rankingResults = []
-
-myStorage.setItem("name", "" )
-myStorage.setItem("clicks", "" )

@@ -1,5 +1,6 @@
 body{
     background-color: rgb(245,245,245);
+    font-family: 'Noto Serif Khitan Small Script', sans-serif;
 }
 /*-----------------------LOGIN SCREEN--------------------*/
 .insert_name {
@@ -45,8 +46,8 @@ body{
 .ranking {
     position: fixed;
     top:55%;
-    left: 30%;
-    width: 40%;
+    left: 20%;
+    width: 60%;
     border-radius: 0.4em;
     box-shadow: 1px 1px 5px 2px #c7c7c7fe;
     background-color: white;
@@ -55,6 +56,11 @@ body{
     flex-direction: column;
     text-align: left;
     align-items: left;
+}
+
+.title_ranking {
+    text-align: center;
+    padding-bottom: 0.5em;
 }
 
 /*-----------------------START GAME SCREEN----------------*/

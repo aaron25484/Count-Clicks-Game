@@ -9,6 +9,7 @@ let showStartGame = document.querySelector(".pre_game-none");
 let showGame = document.querySelector(".main_screen_game-none");
 let showScore = document.querySelector(".score_screen-none");
 
+let textScore = document.getElementById("your_score");
 
 let textUser = document.querySelector("#userName")
 
@@ -19,7 +20,7 @@ enterUser.addEventListener('click', ()=>{
     if(textUser.value === ""){
         enterUser.disabled;
     } else {
-        username =textUser.value;
+        username = textUser.value;
         showLogin.classList.add("insert_name-none");
         showStartGame.classList.remove("pre_game-none");
     }   
@@ -50,21 +51,22 @@ function saveResult (username, result){
     const results = JSON.parse(localStorage.getItem("highResults") || "[]");
     results.push({ username, result });
     results.sort((a, b) => b.result - a.result);
-    localStorage.setItem("highResults", JSON.stringify(results.slice(0, 4)));
+    localStorage.setItem("highResults", JSON.stringify(results.slice(0, 11)));
+    textScore.textContent =  "You have made " + clicks + " clicks"
 }
 
 
 function updateHiresultList() {
     const hiresultList = document.getElementById("hiresultList");
     hiresultList.innerHTML = "";
-  
     const results = JSON.parse(localStorage.getItem("highResults") || "[]");
     results.forEach((entry, index) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = `${index + 1}. ${entry.username} - ${entry.result} clicks`;
-      hiresultList.appendChild(listItem);
+        const listItem = document.createElement("li");
+        listItem.textContent = `${entry.username} - ${entry.result} clicks`;
+        hiresultList.appendChild(listItem);
     });
-  }
+}
+
 
 
 
@@ -77,9 +79,4 @@ againGame.addEventListener('click', ()=>{
 
 updateHiresultList();
 //---------------------PHASE TWO-----------------------//
-
-
-
-
-//--------------------LOCAL STORAGE--------------------//
 

@@ -46,8 +46,8 @@ body{
 .ranking {
     position: fixed;
     top:55%;
-    left: 20%;
-    width: 60%;
+    left: 15%;
+    width: 70%;
     border-radius: 0.4em;
     box-shadow: 1px 1px 5px 2px #c7c7c7fe;
     background-color: white;
@@ -63,10 +63,15 @@ body{
     padding-bottom: 0.5em;
 }
 
+li {
+    font-size: 0.8em;
+    text-align:justify;
+}
+
 /*-----------------------START GAME SCREEN----------------*/
 
 #button_second_screen {
-    margin: 45% auto;
+    margin: 40% auto;
     display: block;
     padding: 0.8em;
     width: 50%;
@@ -80,9 +85,9 @@ body{
 
 
 #button_game {
-    margin: 45% auto;
+    margin: 40% auto;
     display: block;
-    padding: 2em;
+    padding: 0.8em;
     width: 50%;
     background-color: black;
     color: whitesmoke;
@@ -137,8 +142,17 @@ body{
     display: none;
 }
 
-.pre_game-block {
-    display: block;
+.pre_game-flex {
+    display: flex;
+    margin: 9% 9.5% 15%;
+    width: 80%;
+    border-radius: 0.4em;
+    box-shadow: 1px 1px 5px 2px #c7c7c7fe;
+    background-color: white;
+    padding: 2em;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
 .main_screen_game-none {
@@ -147,6 +161,15 @@ body{
 
 .main_screen_game-flex {
     display: flex;
+    margin: 9% 9.5% 15%;
+    width: 80%;
+    border-radius: 0.4em;
+    box-shadow: 1px 1px 5px 2px #c7c7c7fe;
+    background-color: white;
+    padding: 2em;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
 }
 
 .score_screen-none {
@@ -155,4 +178,62 @@ body{
 
 .score_screen-flex {
     display: flex;
+}
+
+/*-------------PHASE TWO MOVING BOX--------------------*/
+
+.pre_moving_game-none{
+    display: none;
+}
+
+.pre_moving_game-flex{
+    display: flex;
+    margin: 9% 9.5% 15%;
+    width: 80%;
+    border-radius: 0.4em;
+    box-shadow: 1px 1px 5px 2px #c7c7c7fe;
+    background-color: white;
+    padding: 2em;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#button_moving_second_screen{
+    margin: 40% auto;
+    display: block;
+    padding: 0.8em;
+    width: 50%;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    border-radius: 0.2em;
+}
+
+.main_moving_screen_game-flex{
+    display: flex;
+    margin: 9% 9.5% 15%;
+    width: 80%;
+    border-radius: 0.4em;
+    box-shadow: 1px 1px 5px 2px #c7c7c7fe;
+    background-color: white;
+    padding: 2em;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+.main_moving_screen_game-none{
+    display: none;
+}
+
+#button_moving_game{
+    margin: 40% auto;
+    display: block;
+    padding: 0.8em;
+    width: 50%;
+    background-color: black;
+    color: whitesmoke;
+    border: none;
+    border-radius: 0.2em;
 }

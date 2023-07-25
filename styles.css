@@ -111,7 +111,7 @@ li {
     align-items: center;
 }
 
-#button_play_again {
+#button_play_again, #button_back_login {
     margin-top: 0.5em;
     width: 50%;
     background-color: black;
@@ -211,9 +211,10 @@ li {
 }
 
 .main_moving_screen_game-flex{
-    display: flex;
+    display: block;
     margin: 9% 9.5% 15%;
     width: 80%;
+    height:20em;
     border-radius: 0.4em;
     box-shadow: 1px 1px 5px 2px #c7c7c7fe;
     background-color: white;
@@ -228,12 +229,12 @@ li {
 }
 
 #button_moving_game{
-    margin: 40% auto;
     display: block;
+    position:relative;
     padding: 0.8em;
-    width: 50%;
     background-color: black;
     color: whitesmoke;
     border: none;
     border-radius: 0.2em;
+
 }
